@@ -110,7 +110,7 @@ class GuitarChordDetector:
         confidence = prediction[0][chord_idx]
         
         # Display result
-        print(f"Detected: {IDK_NO_TIME_TO_FIGURE_OUT_WHY_I_NEED_THIS_MAPPING[chord_idx]} ({confidence*100:.1f}%)")
+        print(f"Detected: {IDK_NO_TIME_TO_FIGURE_OUT_WHY_I_NEED_THIS_MAPPING[chord_idx]}:({confidence*100:.1f}%)")
 
         #chord = self.estimate_chord_fft(audio_array)
         #print(f"Estimated chord: {chord}")
