@@ -1,19 +1,33 @@
 import numpy as np
 import pyaudio
 from collections import deque
-import time
+import time, librosa
+from tensorflow.keras import models
 
+IDK_NO_TIME_TO_FIGURE_OUT_WHY_I_NEED_THIS_MAPPING = {
+    0: 'A',
+    2: 'C',
+    3: 'D',
+    5: 'E',
+    8: 'G',
+    1: 'Am',
+    6: 'Em',
+    4: 'Dm',
+    7: 'F',
+}
 
 class GuitarChordDetector:
 
     def __init__(self):
         
         # Audio parameters
+        self.SPEC_SHAPE = (128, 86)
         self.CHUNK = 4096
         self.FORMAT = pyaudio.paFloat32
         self.CHANNELS = 1
         self.RATE = 44100
         self.RECORD_SECONDS = 3
+        self.model = models.load_model("ohmygodmyfirstmodel.h5")
         
         # Initialize audio
         self.audio = pyaudio.PyAudio()
@@ -21,9 +35,6 @@ class GuitarChordDetector:
         
         # Buffer for audio data
         self.buffer = deque(maxlen=int(self.RATE * self.RECORD_SECONDS / self.CHUNK))
-        
-        # GUI variables
-        self.is_listening = False
 
     def estimate_chord_fft(self, audio_array):
             """Estimate chord non ML way using FFT (frequencies)"""
@@ -65,7 +76,6 @@ class GuitarChordDetector:
                 stream_callback=self.audio_callback
             )
             self.stream.start_stream()
-            self.is_listening = True
             print("Started listening...")
     
     def stop_listening(self):
@@ -74,24 +84,44 @@ class GuitarChordDetector:
             self.stream.stop_stream()
             self.stream.close()
             self.stream = None
-            self.is_listening = False
             print("Stopped listening.")
     
     def process_audio(self):
         """Process audio data to detect chords"""
-        if not self.is_listening or len(self.buffer) < self.buffer.maxlen:
+        if len(self.buffer) < self.buffer.maxlen:
             return
         
         # Combine audio chunks
         audio_data = b''.join(self.buffer)
         audio_array = np.frombuffer(audio_data, dtype=np.float32)
 
-        chord = self.estimate_chord_fft(audio_array)
-        print(f"Estimated chord: {chord}")
+        mel = librosa.feature.melspectrogram(y=audio_array, sr=self.RATE, n_mels=self.SPEC_SHAPE[0], n_fft=2048, hop_length=512)
+        mel_db = librosa.power_to_db(mel, ref=np.max)
+        
+        # Ensure correct shape
+        if mel_db.shape[1] < self.SPEC_SHAPE[1]:
+            mel_db = np.pad(mel_db, ((0, 0), (0, self.SPEC_SHAPE[1] - mel_db.shape[1])))
+        else:
+            mel_db = mel_db[:, :self.SPEC_SHAPE[1]]
+        
+        # Predict
+        prediction = self.model.predict(np.expand_dims(mel_db, axis=0), verbose=0)
+        chord_idx = np.argmax(prediction)
+        confidence = prediction[0][chord_idx]
+        
+        # Display result
+        print(f"Detected: {IDK_NO_TIME_TO_FIGURE_OUT_WHY_I_NEED_THIS_MAPPING[chord_idx]} ({confidence*100:.1f}%)")
+
+        #chord = self.estimate_chord_fft(audio_array)
+        #print(f"Estimated chord: {chord}")
     
 
 guitarchord = GuitarChordDetector()
-guitarchord.start_listening()
+
 while True:
+    guitarchord.start_listening()
+    time.sleep(1)
     guitarchord.process_audio()
-    time.sleep(3)
+    guitarchord.stop_listening
+    time.sleep(0.5)
+    

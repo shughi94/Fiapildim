@@ -22,10 +22,6 @@ class ChordTrainer:
     CHANNELS = 1
     RATE = 44100
     TRAIN_RECORD_SECONDS = 2
-
-
-    def __init__(self):
-        pass
     
     def __init__(self):
         self.audio = pyaudio.PyAudio()
@@ -115,7 +111,6 @@ class ChordTrainer:
             for chord in self.CHORDS:
                 print(f"Get ready to play chord: {chord}")
                 time.sleep(2)
-                print("PLAY NOW!")
                 audio_data = self.record_audio()
                 features = self.extract_features(audio_data)
                 self.save_training_example(features, chord)
