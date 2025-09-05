@@ -1,0 +1,204 @@
+{
+  "A": [
+    {
+      "filepath": "training_data/A_20250905_124052.npz",
+      "timestamp": "2025-09-05T12:40:52.108434"
+    },
+    {
+      "filepath": "training_data/A_20250905_125452.npz",
+      "timestamp": "2025-09-05T12:54:52.965276"
+    },
+    {
+      "filepath": "training_data/A_20250905_125531.npz",
+      "timestamp": "2025-09-05T12:55:31.141698"
+    },
+    {
+      "filepath": "training_data/A_20250905_130153.npz",
+      "timestamp": "2025-09-05T13:01:53.464384"
+    },
+    {
+      "filepath": "training_data/A_20250905_130432.npz",
+      "timestamp": "2025-09-05T13:04:32.671959"
+    },
+    {
+      "filepath": "training_data/A_20250905_130510.npz",
+      "timestamp": "2025-09-05T13:05:10.889100"
+    }
+  ],
+  "C": [
+    {
+      "filepath": "training_data/C_20250905_124056.npz",
+      "timestamp": "2025-09-05T12:40:56.357337"
+    },
+    {
+      "filepath": "training_data/C_20250905_125457.npz",
+      "timestamp": "2025-09-05T12:54:57.208559"
+    },
+    {
+      "filepath": "training_data/C_20250905_125535.npz",
+      "timestamp": "2025-09-05T12:55:35.391302"
+    },
+    {
+      "filepath": "training_data/C_20250905_130436.npz",
+      "timestamp": "2025-09-05T13:04:36.909121"
+    },
+    {
+      "filepath": "training_data/C_20250905_130515.npz",
+      "timestamp": "2025-09-05T13:05:15.116320"
+    }
+  ],
+  "D": [
+    {
+      "filepath": "training_data/D_20250905_124100.npz",
+      "timestamp": "2025-09-05T12:41:00.589856"
+    },
+    {
+      "filepath": "training_data/D_20250905_125501.npz",
+      "timestamp": "2025-09-05T12:55:01.452782"
+    },
+    {
+      "filepath": "training_data/D_20250905_125539.npz",
+      "timestamp": "2025-09-05T12:55:39.618384"
+    },
+    {
+      "filepath": "training_data/D_20250905_130441.npz",
+      "timestamp": "2025-09-05T13:04:41.151876"
+    },
+    {
+      "filepath": "training_data/D_20250905_130519.npz",
+      "timestamp": "2025-09-05T13:05:19.362430"
+    }
+  ],
+  "E": [
+    {
+      "filepath": "training_data/E_20250905_124104.npz",
+      "timestamp": "2025-09-05T12:41:04.839606"
+    },
+    {
+      "filepath": "training_data/E_20250905_125505.npz",
+      "timestamp": "2025-09-05T12:55:05.693812"
+    },
+    {
+      "filepath": "training_data/E_20250905_125543.npz",
+      "timestamp": "2025-09-05T12:55:43.854911"
+    },
+    {
+      "filepath": "training_data/E_20250905_130445.npz",
+      "timestamp": "2025-09-05T13:04:45.406991"
+    },
+    {
+      "filepath": "training_data/E_20250905_130523.npz",
+      "timestamp": "2025-09-05T13:05:23.606590"
+    }
+  ],
+  "G": [
+    {
+      "filepath": "training_data/G_20250905_124109.npz",
+      "timestamp": "2025-09-05T12:41:09.093358"
+    },
+    {
+      "filepath": "training_data/G_20250905_125509.npz",
+      "timestamp": "2025-09-05T12:55:09.923030"
+    },
+    {
+      "filepath": "training_data/G_20250905_125548.npz",
+      "timestamp": "2025-09-05T12:55:48.105698"
+    },
+    {
+      "filepath": "training_data/G_20250905_130449.npz",
+      "timestamp": "2025-09-05T13:04:49.641680"
+    },
+    {
+      "filepath": "training_data/G_20250905_130527.npz",
+      "timestamp": "2025-09-05T13:05:27.853567"
+    }
+  ],
+  "Am": [
+    {
+      "filepath": "training_data/Am_20250905_124113.npz",
+      "timestamp": "2025-09-05T12:41:13.348430"
+    },
+    {
+      "filepath": "training_data/Am_20250905_125514.npz",
+      "timestamp": "2025-09-05T12:55:14.162757"
+    },
+    {
+      "filepath": "training_data/Am_20250905_125552.npz",
+      "timestamp": "2025-09-05T12:55:52.331546"
+    },
+    {
+      "filepath": "training_data/Am_20250905_130453.npz",
+      "timestamp": "2025-09-05T13:04:53.887149"
+    },
+    {
+      "filepath": "training_data/Am_20250905_130532.npz",
+      "timestamp": "2025-09-05T13:05:32.096887"
+    }
+  ],
+  "Em": [
+    {
+      "filepath": "training_data/Em_20250905_124117.npz",
+      "timestamp": "2025-09-05T12:41:17.603323"
+    },
+    {
+      "filepath": "training_data/Em_20250905_125518.npz",
+      "timestamp": "2025-09-05T12:55:18.406975"
+    },
+    {
+      "filepath": "training_data/Em_20250905_125556.npz",
+      "timestamp": "2025-09-05T12:55:56.572591"
+    },
+    {
+      "filepath": "training_data/Em_20250905_130458.npz",
+      "timestamp": "2025-09-05T13:04:58.131916"
+    },
+    {
+      "filepath": "training_data/Em_20250905_130536.npz",
+      "timestamp": "2025-09-05T13:05:36.350110"
+    }
+  ],
+  "Dm": [
+    {
+      "filepath": "training_data/Dm_20250905_124121.npz",
+      "timestamp": "2025-09-05T12:41:21.847459"
+    },
+    {
+      "filepath": "training_data/Dm_20250905_125522.npz",
+      "timestamp": "2025-09-05T12:55:22.652545"
+    },
+    {
+      "filepath": "training_data/Dm_20250905_125600.npz",
+      "timestamp": "2025-09-05T12:56:00.824441"
+    },
+    {
+      "filepath": "training_data/Dm_20250905_130502.npz",
+      "timestamp": "2025-09-05T13:05:02.392822"
+    },
+    {
+      "filepath": "training_data/Dm_20250905_130540.npz",
+      "timestamp": "2025-09-05T13:05:40.604626"
+    }
+  ],
+  "F": [
+    {
+      "filepath": "training_data/F_20250905_124126.npz",
+      "timestamp": "2025-09-05T12:41:26.082865"
+    },
+    {
+      "filepath": "training_data/F_20250905_125526.npz",
+      "timestamp": "2025-09-05T12:55:26.893185"
+    },
+    {
+      "filepath": "training_data/F_20250905_125605.npz",
+      "timestamp": "2025-09-05T12:56:05.058085"
+    },
+    {
+      "filepath": "training_data/F_20250905_130506.npz",
+      "timestamp": "2025-09-05T13:05:06.628379"
+    },
+    {
+      "filepath": "training_data/F_20250905_130544.npz",
+      "timestamp": "2025-09-05T13:05:44.850662"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
 numpy
 pyaudio
 librosa
+tensorflow
+scikit-learn
