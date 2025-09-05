@@ -24,6 +24,6 @@ Epoch 43/50
 Then we can run `main.py` that listens and uses the model to predict the guitar chord
 
 ## Note
-This project does not work at all, but I like the idea
+This project does not work at all (keeps saying that everything is an E chord), but I like the idea
 
 Also it's more of a classification model rather than a predicting one, but hey I should have remembered last weekend to do this project :(
